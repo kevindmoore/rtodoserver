@@ -35,7 +35,7 @@ import models.User
 interface Repository {
     suspend fun addUser(email: String,
                         displayName: String,
-                        password: String): User?
+                        passwordHash: String): User?
     suspend fun deleteUser(userId: Int)
     suspend fun findUser(userId: Int): User?
     suspend fun findUserByEmail(email: String): User?

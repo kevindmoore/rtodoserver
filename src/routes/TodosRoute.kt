@@ -7,10 +7,7 @@ import io.ktor.application.log
 import io.ktor.auth.authenticate
 import io.ktor.http.HttpStatusCode
 import io.ktor.http.Parameters
-import io.ktor.locations.Location
-import io.ktor.locations.delete
-import io.ktor.locations.get
-import io.ktor.locations.post
+import io.ktor.locations.*
 import io.ktor.request.receive
 import io.ktor.response.respond
 import io.ktor.routing.Route
@@ -21,9 +18,11 @@ import repository.Repository
 
 const val TODOS = "$API_VERSION/todos"
 
+@KtorExperimentalLocationsAPI
 @Location(TODOS)
 class TodoRoute
 
+@KtorExperimentalLocationsAPI
 fun Route.todos(db: Repository) {
     authenticate("jwt") {
         post<TodoRoute> {

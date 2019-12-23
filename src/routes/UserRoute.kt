@@ -7,6 +7,7 @@ import io.ktor.application.call
 import io.ktor.application.log
 import io.ktor.http.HttpStatusCode
 import io.ktor.http.Parameters
+import io.ktor.locations.KtorExperimentalLocationsAPI
 import io.ktor.locations.Location
 import io.ktor.locations.delete
 import io.ktor.locations.post
@@ -25,18 +26,23 @@ const val USER_LOGOUT = "$USERS/logout"
 const val USER_CREATE = "$USERS/create"
 const val USER_DELETE = "$USERS/delete"
 
+@KtorExperimentalLocationsAPI
 @Location(USER_LOGIN)
 class UserLoginRoute
 
+@KtorExperimentalLocationsAPI
 @Location(USER_LOGOUT)
 class UserLogoutRoute
 
+@KtorExperimentalLocationsAPI
 @Location(USER_CREATE)
 class UserCreateRoute
 
+@KtorExperimentalLocationsAPI
 @Location(USER_DELETE)
 class UserDeleteRoute
 
+@KtorExperimentalLocationsAPI
 fun Route.users(db: Repository, jwtService: JwtService, hashFunction: (String) -> String) {
     post<UserLoginRoute> {
         val signinParameters = call.receive<Parameters>()
