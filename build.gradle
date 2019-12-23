@@ -51,6 +51,7 @@ dependencies {
 //task stage(dependsOn: ['installDist'])
 task stage(dependsOn: ['shadowJar', 'build', 'clean'])
 build.mustRunAfter clean
+shadowJar.mustRunAfter build
 
 // This task will generate your fat JAR and put it in the ./build/libs/ directory
 shadowJar {
