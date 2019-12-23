@@ -49,8 +49,6 @@ dependencies {
     testCompile "io.ktor:ktor-server-tests:$ktor_version"
 }
 task stage(dependsOn: ['assembleShadowDist'])
-//task stage(dependsOn: ['shadowJar', 'build'])
-//build.mustRunAfter clean
 
 // This task will generate your fat JAR and put it in the ./build/libs/ directory
 shadowJar {
