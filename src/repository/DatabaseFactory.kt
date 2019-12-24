@@ -53,7 +53,7 @@ object DatabaseFactory {
 
     private fun hikari(): HikariDataSource {
         val config = HikariConfig()
-        config.driverClassName = "org.postgresql.Driver"
+        config.driverClassName = System.getenv("JDBC_DRIVER")
         config.jdbcUrl = System.getenv("JDBC_DATABASE_URL")
         config.maximumPoolSize = 3
         config.isAutoCommit = false
