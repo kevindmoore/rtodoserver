@@ -29,8 +29,8 @@
  */
 package com.raywenderlich
 
-import JwtService
-import hash
+import auth.JwtService
+import auth.hash
 import io.ktor.application.Application
 import io.ktor.application.install
 import io.ktor.auth.Authentication

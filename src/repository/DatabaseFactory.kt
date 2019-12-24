@@ -30,12 +30,12 @@
 
 package repository
 
-import models.Users
+import com.raywenderlich.models.Users
+import com.raywenderlich.repository.Todos
 import com.zaxxer.hikari.HikariConfig
 import com.zaxxer.hikari.HikariDataSource
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import models.Todos
 import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.SchemaUtils
 import org.jetbrains.exposed.sql.transactions.transaction

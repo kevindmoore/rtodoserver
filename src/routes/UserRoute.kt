@@ -29,7 +29,7 @@
  */
 package routes
 
-import JwtService
+import auth.JwtService
 import com.raywenderlich.API_VERSION
 import io.ktor.application.application
 import io.ktor.application.call

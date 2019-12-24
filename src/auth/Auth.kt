@@ -27,13 +27,13 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+package auth
+
 import io.ktor.util.KtorExperimentalAPI
 import io.ktor.util.hex
 import javax.crypto.Mac
 import javax.crypto.spec.SecretKeySpec
 
-const val MIN_USER_ID_LENGTH = 4
-const val MIN_PASSWORD_LENGTH = 6
 
 @KtorExperimentalAPI
 val hashKey = hex(System.getenv("SECRET_KEY"))
@@ -47,7 +47,3 @@ fun hash(password: String): String {
     hmac.init(hmacKey)
     return hex(hmac.doFinal(password.toByteArray(Charsets.UTF_8)))
 }
-
-private val userIdPattern = "[a-zA-Z0-9_\\.]+".toRegex()
-
-internal fun userNameValid(userId: String) = userId.matches(userIdPattern)

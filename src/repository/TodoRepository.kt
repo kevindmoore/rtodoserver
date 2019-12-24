@@ -30,10 +30,10 @@
 
 package repository
 
+import com.raywenderlich.models.Users
+import com.raywenderlich.repository.Todos
 import models.Todo
-import models.Todos
 import models.User
-import models.Users
 import org.jetbrains.exposed.sql.ResultRow
 import org.jetbrains.exposed.sql.deleteWhere
 import org.jetbrains.exposed.sql.insert

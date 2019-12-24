@@ -27,6 +27,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+package auth
 
 import com.auth0.jwt.JWT
 import com.auth0.jwt.JWTVerifier
