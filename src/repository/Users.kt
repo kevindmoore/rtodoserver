@@ -1,4 +1,4 @@
-package com.raywenderlich.models
+package com.raywenderlich.repository
 
 import org.jetbrains.exposed.sql.Column
 import org.jetbrains.exposed.sql.Table

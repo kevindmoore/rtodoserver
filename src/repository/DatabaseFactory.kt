@@ -30,7 +30,7 @@
 
 package repository
 
-import com.raywenderlich.models.Users
+import com.raywenderlich.repository.Users
 import com.raywenderlich.repository.Todos
 import com.zaxxer.hikari.HikariConfig
 import com.zaxxer.hikari.HikariDataSource
